@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://JonesGP.com/MKDocs/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>MKDocs - JonesGP's Docs</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "MKDocs";
+        var mkdocs_page_input_path = "MKDocs.md";
+        var mkdocs_page_url = "/MKDocs/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> JonesGP's Docs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../CSS/">CSS</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../SASS/">SASS</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../django_mecajato/">Django Mecajato</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../django/">Django</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../DOM/">DOM</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../GitHub/">GitHub</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../powershell_seguranca/">PowerShell Segurança terminal</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../pyinstaller/">PyInstaller</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../requirements.txt/">Requirements</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Streamlit/">Streamlit</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Vite/">Vite</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="" href="../about.md">About</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">JonesGP's Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">MKDocs</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="mkdocs">MKDocs</h1>
+<h2 id="para-installar-o-mkdocs">Para installar o mkdocs</h2>
+<pre><code class="language-PIP">pip install mkdocs
+</code></pre>
+<pre><code class="language-POETRY">poetry add mkdocs
+</code></pre>
+<p>Existem basicamente dois tipos de arquivos no mkdocs, o .md que vão sempre esta na pasta /docs e mkdocs.yml que é o arquivo principal da pagina</p>
+<h2 id="cli">CLI</h2>
+<p>para criar um novo projeto</p>
+<pre><code>mkdocs new &lt;nome_do_projeto&gt;
+</code></pre>
+<p>para colocar um servidor no ar para vermos a documentação no browser</p>
+<pre><code>mkdocs serve
+</code></pre>
+<p>para fazer o deproy no github pages</p>
+<pre><code>mkdocs gh-deploy
+</code></pre>
+<p>no mkdocs.yml tem o site_name que é o nome do proprio site</p>
+<pre><code>site_name: &lt;nome do seu site&gt;
+</code></pre>
+<h1 id="markdown-padrao">MarkDown Padrão</h1>
+<table>
+<thead>
+<tr>
+<th>Tipos</th>
+<th>Exemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cabeçalho</td>
+<td>#Titulo ##Sub ###h3</td>
+</tr>
+<tr>
+<td>Negrito</td>
+<td>**texto em negrito</td>
+</tr>
+<tr>
+<td>Itálico</td>
+<td><code>*Em itálico*</code></td>
+</tr>
+<tr>
+<td>Citação</td>
+<td>&gt; Que seja feita a luz &lt;</td>
+</tr>
+<tr>
+<td>Lista Ordenada</td>
+<td>1. Primeiro 2. Segundo</td>
+</tr>
+<tr>
+<td>Lista !Ordenada</td>
+<td>- item A - item B</td>
+</tr>
+<tr>
+<td>Código</td>
+<td><code>t</code>xpto=1`</td>
+</tr>
+<tr>
+<td>Links</td>
+<td><a href="https://jonesgp.com">JonesGP</a></td>
+</tr>
+<tr>
+<td>Imagens</td>
+<td><img alt="imagem" src="./imagem.png" /></td>
+</tr>
+</tbody>
+</table>
+<h1 id="markdown-extendido">MarkDown Extendido</h1>
+<table>
+<thead>
+<tr>
+<th>Tipos</th>
+<th>Exemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tabelas</td>
+<td><code>| Nome    | Idade |</code></td>
+</tr>
+<tr>
+<td></td>
+<td><code>|---------|-------|</code></td>
+</tr>
+<tr>
+<td></td>
+<td><code>| Carla   |  84   |</code></td>
+</tr>
+<tr>
+<td>----------------</td>
+<td>--------------------------------</td>
+</tr>
+<tr>
+<td>Itálico</td>
+<td><code>*Em itálico*</code></td>
+</tr>
+<tr>
+<td>Citação</td>
+<td>&gt; Que seja feita a luz &lt;</td>
+</tr>
+</tbody>
+</table>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

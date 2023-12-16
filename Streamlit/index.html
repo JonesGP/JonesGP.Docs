@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://JonesGP.com/Streamlit/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Streamlit - JonesGP's Docs</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Streamlit";
+        var mkdocs_page_input_path = "Streamlit.md";
+        var mkdocs_page_url = "/Streamlit/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> JonesGP's Docs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../CSS/">CSS</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../SASS/">SASS</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../django_mecajato/">Django Mecajato</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../django/">Django</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../DOM/">DOM</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../GitHub/">GitHub</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../powershell_seguranca/">PowerShell Segurança terminal</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../pyinstaller/">PyInstaller</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../requirements.txt/">Requirements</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="./">Streamlit</a>
+    <ul class="current">
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Vite/">Vite</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="" href="../about.md">About</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">JonesGP's Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Streamlit</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="streamlit">StreamLit</h1>
+<p>Para instalar pip install streamlit
+para rodar o servidor streamlit run <nome do arquivo> ex streamlit run main.py</p>
+<p>para importar import streamlit as st (importar assim não é obrigatório)</p>
+<h1 id="textos">textos</h1>
+<p>st.header ('Header da dasboard')
+st.text('texto qualquer')</p>
+<p>para incluir um item dentro da nossa sidebar
+st.sidebar.text('texto qualquer')</p>
+<p>para incluir markdown na dashboard
+st.markdown('# titulo por exemplo em markdown')</p>
+<p>para incluir uma legenda
+st.caption('minha legenda') para SEO do google para destacar no google</p>
+<p>quando voce precisar de algo mais genericos para printar qualquer coisa como misturar qualquer coisa como banco de dados liguagem de markdown
+pessoas = [{'Nome': 'Caio', 'Idade': 22}, {'Nome': 'Marcos', 'Idade': 33}]
+st.write('# Pessoa', pessoas) pessoas é a variavel</p>
+<h1 id="exibicao-de-dados">Exibição de dados</h1>
+<p>para trabalhar com dados com o streamlit a gente pode usar varias ferramentas, mas a mais comum para trabalhar com dados massivos do python que é oque pessoas de ciencias de dados usam é o pandas
+pandas é uma ferramenta sensacial ela tras uma performance muito boa</p>
+<p>para installar o pandas é pip install pandas
+para criar um dataframe que é um conjunto de dados do pandas
+import pandas as pd
+df = pd.DataFrame( o DataFrame vai criar um conjunto de dados com linhas e colunas de 2 dimenções
+  #para gerar os dados vamos ultilizar o numpy para gerar um conjunto de dados, para trabalhar com algebra linear e matematica, para criar dados e vetores e matrizes então é uma ferramenta essecial para quem quer trabalhar com analise e ciencias de dados, então o numpy vai gerar aleatoriamnete os dados
+  para trabalhar com o numpy tem que installar ele pip install numpy e para importar import numpy as np
+  np.random.randn(10, 3) x, y linhas e columas
+  columns=['Preço', 'Taxa de ocupação', 'Taxa de inadimplência', 'Pessoas por casa']
+) </p>
+<p>st.table(df) assim criamos uma tabela com os dados do pandas gerados pelo numpy sendo mostrada com o streamlit
+st.dataframe(df) a difereça do table para o dataframe é que o dataframe o usuario tem mais mobilidade de modificar a forma de visualização da tabela</p>
+<p>st.line_chart(df) para criar um grafico de linhas top</p>
+<p>st.bar_chart(df) para criar um grafico de barras</p>
+<hr />
+<p>voce jogando o botão dentro de uma variavel voce pode capturar a ação do botão
+x = st.sidebar.button('Exibir gráfico') cria um botão na sidebar</p>
+<p>voce pode usar o if par a verificar se o botão foi clicado
+if st.sidebar.button('Exibir gráfico')
+  st.header('meu grafico')</p>
+<hr />
+<h1 id="checkbox">checkbox</h1>
+<p>check = st.checkbox('Aceitos') cria um checkbox e ainda captura ele em uma variavel</p>
+<p>if check: # dessa forma pode fazer para aparecer o item ou sumir de forma bem simples
+  st.white('Marcado')</p>
+<hr />
+<h1 id="radios">radios</h1>
+<p>opcao = st.radio( #dessa forma cria varias opçoes de radio
+  'Selecione uma opção',
+  ('Opção 1', 'Opção 2')
+)
+com as opções criadas voce pode criar varias condições para cada opção
+if opcao == 'opção 1': lembrando que a opção 1 ja vem selecionada
+  st.header('Selecionei a opção 1')
+elif opcao == 'opção 2':
+  st.header('Selecionei a opção 2')</p>
+<hr />
+<h1 id="selectbox">selectbox</h1>
+<p>funciona de forma parecida com o radio porem muda a forma que é mostrado na tela como uma lista de opção para selecionar
+opcao = st.sidebar.selectbox(
+  'Selecione uma opção',
+  ('Opção 1', 'Opção 2')
+)</p>
+<hr />
+<h1 id="multiselect">multiselect</h1>
+<p>funciona de forma parecida como selectbox porem muda que da para o usuario selecionar mais de uma opção
+opcao = st.sidebar.multiselect(
+  'Selecione uma opção',
+  ('Opção 1', 'Opção 2', 'Opção 3', 'Preço')
+  ('Opção 1', 'Opção 3') passando esse campo no multiselect voce pode ja definir quais campos ja vão selecionados
+)
+if 'Preço' in opcao: # se preço tinver na lista de opção selecionadas ele faz isso
+  print(opcao)</p>
+<hr />
+<h1 id="slider">slider</h1>
+<p>é aquele elemento que nos podemos arrastar para aumentar ou diminuir um slider assim definindo um maximo e um minimo
+opcao = st.sidebar.slider(
+  'Preço máximo e mínimo',
+  0.0, 100.0, (25.0, 75.0) aqui voce decide o minimo, o maximo, de entre parentes pode definir qual o valor que o slider vai começar
+)</p>
+<hr />
+<h1 id="text_input-number_input-para-aceitar-so-numeros">text_input, number_input para aceitar só numeros</h1>
+<p>uma entrada de texto simples
+st.text_input(
+  'Digite o seu texto'
+)</p>
+<hr />
+<h1 id="date_input">date_input</h1>
+<p>para selecionar data com seleção de calendario
+st.date_input(
+  'Digite sua data'
+  datetime.date( 2022, 2, 2) aqui voce ja pode definir sua data para poder ja começar por ela
+)</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../requirements.txt/" class="btn btn-neutral float-left" title="Requirements"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../Vite/" class="btn btn-neutral float-right" title="Vite">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../requirements.txt/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../Vite/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

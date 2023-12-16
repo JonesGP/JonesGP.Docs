@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://JonesGP.com/DOM/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>DOM - JonesGP's Docs</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "DOM";
+        var mkdocs_page_input_path = "DOM.md";
+        var mkdocs_page_url = "/DOM/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> JonesGP's Docs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../CSS/">CSS</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../SASS/">SASS</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../django_mecajato/">Django Mecajato</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../django/">Django</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="./">DOM</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../GitHub/">GitHub</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../powershell_seguranca/">PowerShell Segurança terminal</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../pyinstaller/">PyInstaller</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../requirements.txt/">Requirements</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Streamlit/">Streamlit</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Vite/">Vite</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="" href="../about.md">About</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">JonesGP's Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">DOM</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <ul>
+<li>
+<p>DOM - document Objet Model representa a estrutura do documento HTML e o relacionamento entre os elementos(as tags).</p>
+</li>
+<li>
+<p>Formas de selecionar os elementos
+    <em>document.getElementById('o elemento pelo id')
+        Para adicionar class no elemento é so botar .classList.add('nome da classe que voce quer adicionar')
+    </em>const divs = document.getElementsByTagName('div') pega todos os elementos pela tag e joga dentro de divs oque aca criando uma html collection fazendo um dir(divs) no console do navegador da pra ve a collection
+        muitas coisa nao da pra fazer com html collections e por isso é interessante transformar isso para uma Array
+            Array.from(divs).forEach(e =&gt; e.classList.remove('destaque'))</p>
+<pre><code>*outra forma de transforma um html collection em um array é usando o spread 
+    const divsArray = [...divs] ele vai espalhar todos os elementos dentro desse novo array
+    divsArray.forEach(e =&gt; e.classList.add('destaque')
+</code></pre>
+<p>*const ultimosElementos = document.getElementsByClassName('ultimo') forma de pegar todos os elementos por classe
+    for(let e of ultimosElemntos) { forma de tira uma classe de um html colection
+       e.classList.remove('destaque')
+    }   </p>
+<p>*document.querySelector('#primeiro').classList.add('destaque') o querySelector espera um seletor css e é bem mais frexivel e pode selecionar por classe, id, tag, atributo, atributo de um determinado tipo, um elemento que esta dentro de outro, elementos que nao tenham uma determinada classe</p>
+<p>const selecionar = seletor =&gt; 
+    document.querySelectorAll(seletor).forEach(e =&gt; e.classList.add('destaque')) retorna um node list e não um html collection e no node list tem apenas a função forEach
+const deselecionar = seletor =&gt;
+    document.querySelectorAll(seletor).forEach(e =&gt; e.classList.remove('destaque')
+selecionar('destaque')
+deselecionar('<em>')
+selecionar(':not(#primeiro)') da pra uma pseudo-classe para nao selecionar o id primeiro
+selecionar(':nth-child(1)') pega apenas o primeiro elemento em relação ao pai
+selecionar('div:nth-of-type(1)') pega o elemento o primeiro elemento do type div
+selecionar('[wb-attrib]') você pode selecionar a partir de um atributo
+</em>para selecionar formularios
+console.log(document.forms) retorna no console uma html collection com a coleção de formularios
+console.log(document.forms[0]) tambem suporta usar um [index] para pegar somente oque nescecita
+console.log(document.getElementsByName('pesquisa') pega os elementos pelo nome nesse caso aparece um node list
+console.log(document.pesquisa) pega o elemento que tem o nome pesquisa
+console.log(document.pesquisa.q) pega o elemento pelo nome no caso pega o elemento de nome q que esta dentro de pesquisa
+document.pesquisa.q.value = 'Linux' altera as propriedade de q
+document.pesquisa.hl.value = 'en-us'
+console.log(document.pesquisa.hl.selectedIndex)
+<em>Navegando entre dentro dos elementos
+const lista = document.querySelector('div ul') aqui pega uma ul que é filha de uma div
+lista.parentNode.log() aqui pega o pai da ul
+lista.childNodes.log() esse pega os filhos com os espacos no html
+const primeiro = lista.firstChild primeiro filho do elemento lista no caso retorna um texto
+primeiro.nextSibling.log() pega o proximo irmão
+const ultimo = lista.lastChild pega o ultimo filho
+ultimo.previousSibling.log() pega o irmão antes dele
+lista.children.log() retorna uma html collection com os filhos
+lista.firstElementChild.log() retorna o primeiro elemento de fato que foi definido dentro da lista
+lista.lastElementChild.log()
+lista.parentNode.previousElementSibling.log() pega o pai de lisa e pega o elemento anterior a ele mesmo
+lista.parentNode.nextElementSibling.log() pega o pai de lista e pega o elemento depois dele mesmo
+</em>acessando os atributos
+const img = document.querySelector('img')
+img.getAttribute('src') aqui pega o atributo src de img(que é uma imagem) pega um atributo a partir de uma string
+img.src aqui pega ja direto pela função diferente do anterior que pega pela o attributo passando uma string no mesmo nome
+img['src'] aqui pega o atributo pelo nome do atributo
+img.alt acessa o atributo alt da imagem
+*Elementos
+img.nodeType    o tipo de elemento representado por numeros 1 2 3 4 5 6 7
+img.nodeName    nome daquele elemento
+img.nodeValue   o valor daquele no</p>
+<p>const src = img.getAttributeNode('src')
+link.href pega o href de link
+link.firstChild.nodeType pega o primeiro elemento(retorna um texto) de link e verifica o tipo de no e retorna o valor </p>
+<p>const lista = document.querySelector('div ul[destino="escritório"]') pega o filho de div do tipo ul com o atributo destino="escritório"
+lista.child Nodes lista de nos dentro de lista
+lista.id    acessa o atributo id
+lista.getAttribute('destino')   pega o atributo pelo nome dento da tag
+lista.hasAttribute('destino')   verifica se tem o atributo dentro da tag
+lista.setAttribute('destino', 'empresa') troca o valor do atributo destino(que esta como escritorio) por empresa
+lista.setAttribute('status', 'aberto') serve tambem pra adicionar um atributo caso ele nao existe ja passando o valor dele
+lista.removeAttribute('destino') remove o atributo
+atributos que voce vai criar no caso os personalizados sao tratados um pouco diferente quando começados com data-nomedoatributo
+lista.dataset pega a lista de atributos como dados
+lista.dataset.urgencia pega o dado dentro de urgencia especifico
+lista.dataset.urgencia = 4 aqui bota o valor dentro de urgencia
+//Cuidado
+const label = document.querySelector('label')
+label.for cuidado que se voce definir um atributo com nome de funçoes pode dar problema
+label.htmlfor para isso voce pode so botar um html antes do nome do atributo que voce quer acessar</p>
+<p>const lista = document.querySelector('#compras')
+//somente leitura
+console.log(lista.attributes) os atributos da lista
+console.log(lista.attributes[0])
+console.log(lista.attributes.id)
+console.log(lista.attributes.destino)
+console.log(lista.attributes['data-urgencia'])</p>
+</li>
+</ul>
+<p>*Acessando Classes
+    const classes = document.querySelector('div').classList
+    classes.add('destaque')
+    classes.remove('destaque')
+    classes.toggle('destaque') se tem ele muda e se nao tem ele adiciona
+    console.log(classes.contains('destaque')) verifica se a classe esta contida ou nao
+    console.log(classes.length)
+    classes.toggle('destaque')</p>
+<pre><code>for(let c of classes) {
+    console.log(c)
+}
+classes.forEach(c =&gt; console.log(c))
+</code></pre>
+<p>*Modificando HTML
+    const body = document.querySelector('body')
+    const div1 = document.createElement('div')</p>
+<pre><code>div1.classList.add('destaque') adicionou uma classe de nome destaque
+div1.innerHTML = 'Primeiro' adiciona o conteudo da div
+
+const div2 = document.createElement('div')
+div2.setAttribute('wm-atributo', 'valor') adiciona um atributo na div2
+div2.innerHTML = 'segundo'
+
+const p = document.createElement('p')
+p.innerHTML = 'Terceiro'
+const div3 = document.createElement('div')
+div3.appendChild(p) adiciona como ultimo elemento na div3
+body.appendChild(div1)
+
+const texto = document.createTextNode('Antes...')
+div3.insertBefore(texto, div3.childNodes[0]) adiciona na div3, o elemento texto antes da posição div3.childNodes[0]
+
+const div4 = div3.cloneNode(true) clona a div3 e no parametro verifica se clona ou nao os filhos
+body.appendChild(div4)
+body.removeChild(div3)
+
+div.innerHTML = 'Texto alterado' substitui tudo que esta dentro da div pelo valor que foi colocado ali
+div.outerHTML = 'texto alterado' subistitui absolutamente tudo inclusive as tags
+div.insertAdjacentHTML('beforebegin', '&lt;p&gt;Antes do Início&lt;/p&gt;') adiciona a tag p antes do inicio
+div.insertAdjacentHTML('afterbegin', '&lt;p&gt;depois do inicio&lt;/p&gt;') adiciona a tag p depois do inicio
+div.insertAdjacentHTML('beforeen', '&lt;p&gt;antes do fim&lt;/p&gt;') adicio
+            afterend
+console.log(div.innerText) pega apenas o texto da tag div
+</code></pre>
+<p>*Trabalhando com eventos
+    <p>href="https://google.com.br" onclick="navegarEm5s(event)"</p>
+    function navegarEm5s(e) {
+        e.preventDefault() previne que o evento padrão aconteca
+        console.log('Saindo em 5s...')
+        setTimeout(() =&gt; {
+            const link = e.target
+            window.location.href = link.href                          <br />
+        })
+    } <br />
+    const a = document.querySelector('a')
+    a.onclick = navegarEm5s</p>
+<pre><code>const a = document.querySelector('[espera-um-pouco]') usar um atributo na tag é o melhor pra usar no javascript
+a.onclick = navegarEm5s
+
+const item = document.querySelector('div')
+item.style.position = 'absolute'
+item.onmousemove = e =&gt; {
+    const item = e.target target é o proprio elemento que acionou o click
+    item.style.cursor = 'move'
+    if (e.buttons) {
+        item.style.top = `${e.clientY - (item.clientHeight / 2)}px`
+        item.style.left = `${e.clientX - (item.clientWidth / 2)}px`
+
+    }
+</code></pre>
+<p>}</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../django/" class="btn btn-neutral float-left" title="Django"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../GitHub/" class="btn btn-neutral float-right" title="GitHub">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../django/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../GitHub/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

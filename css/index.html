@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://JonesGP.com/CSS/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>CSS - JonesGP's Docs</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "CSS";
+        var mkdocs_page_input_path = "CSS.md";
+        var mkdocs_page_url = "/CSS/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> JonesGP's Docs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="./">CSS</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#margin-collapse-formas-de-tirar-juncao-de-margin">Margin Collapse formas de tirar junção de margin</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#propriedade-display">Propriedade Display</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#box-sizing">Box Sizing</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#overflow">Overflow</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#float">Float</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#unidade">Unidade</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#position">Position</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#texto">Texto</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#media-query">Media Query</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#flex-box">Flex Box</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#quando-voce-marca-display-flex-voce-transforma-a-caixa-em-um-flex-container">Quando você marca display: flex;, você transforma a caixa em um flex container.</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#propriedades-para-ajustar-os-itens-dentro-do-flex-container">Propriedades para ajustar os itens dentro do flex container:</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#propriedades-para-os-itens-individuais">Propriedades para os itens individuais:</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#outras-propriedades-relacionadas">Outras propriedades relacionadas:</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#css-grid">CSS Grid</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#animacoes-css">Animações CSS</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#mantendo-proporcao-em-imagens">Mantendo proporção em imagens</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../SASS/">SASS</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../django_mecajato/">Django Mecajato</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../django/">Django</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../DOM/">DOM</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../GitHub/">GitHub</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../powershell_seguranca/">PowerShell Segurança terminal</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../pyinstaller/">PyInstaller</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../requirements.txt/">Requirements</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Streamlit/">Streamlit</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Vite/">Vite</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="" href="../about.md">About</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">JonesGP's Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">CSS</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="basico-do-css">Básico do CSS</h1>
+<h2 id="margin-collapse-formas-de-tirar-juncao-de-margin">Margin Collapse formas de tirar junção de margin</h2>
+<ul>
+<li><code>float: left / right;</code></li>
+<li><code>position: absolute;</code></li>
+<li><code>display: inline-block;</code></li>
+</ul>
+<h2 id="propriedade-display">Propriedade Display</h2>
+<p>Por padrão, a maioria das tags vai vir com <code>display: block</code>. 
+- <code>display: block;</code>: Significa que cada elemento vai ter sua própria linha, cancelando as propriedades de cada tag.
+- <code>display: inline;</code>: Cada elemento vai ficar na mesma linha, ignorando configurações de width e height.
+- <code>display: inline-block;</code>: Cada elemento fica na mesma linha, porém aceitando configurações de width e height.</p>
+<p><em>Atenção: Comportamento estranho com inline-block no HTML vão ser considerados espaços em branco entre os itens.
+</em>Em casos de uso do inline-block, se não carregar a imagem, a caixa inteira vai descer porque o tipo de alinhamento vertical é baseline. Para ajustar isso, é só colocar <code>vertical-align: top;</code> e não baseline.</p>
+<h2 id="box-sizing">Box Sizing</h2>
+<ul>
+<li><code>box-sizing: border-box;</code>: Faz com que a caixa do elemento seja a caixa inteira, incluindo padding e border. Ou seja, se quiser que a da borda pra dentro seja considerado como tamanho que você pediu em width ou height.</li>
+<li><code>box-sizing: content-box;</code>: Faz com que a caixa seja do tamanho do próprio conteúdo. No caso, todos já vão vir com content box.</li>
+</ul>
+<h2 id="overflow">Overflow</h2>
+<ul>
+<li><code>overflow: hidden;</code>: Esconde todo o overflow.</li>
+<li><code>overflow: scroll;</code>: Vai fazer o scroll tanto no eixo x quanto no y (scroll barra de rolagem).</li>
+<li><code>overflow-x: scroll;</code>: Vai fazer o scroll no eixo x.</li>
+<li><code>overflow-y: hidden;</code>: Vai esconder o overflow do eixo y.</li>
+</ul>
+<h2 id="float">Float</h2>
+<p>Float é a propriedade de flutuar tanto para a direita quanto para a esquerda, no centro e por aí vai. No entanto, float não é bom de usar. É melhor usar o flex box.
+- <code>float: right;</code>: Vai alinhar na linha a partir do primeiro elemento.
+- <code>clear: right;</code>: Serve para limpar o float anterior.</p>
+<h2 id="unidade">Unidade</h2>
+<ul>
+<li>Absolutos: <code>px</code>, <code>cm</code>, <code>mm</code></li>
+<li>Viewport: <code>vh</code>, <code>vw</code>, <code>vmin</code>, <code>vmax</code></li>
+<li>Font: <code>rem</code> (em relação à fonte raiz), <code>em</code> (em relação à fonte pai)</li>
+</ul>
+<h2 id="position">Position</h2>
+<ul>
+<li><code>position: static;</code>: Valor padrão, apenas o espaço do conteúdo.</li>
+<li><code>position: relative;</code>: Posição relativa em relação ao elemento anterior.</li>
+<li><code>position: absolute;</code>: Posição absoluta em relação à página.</li>
+<li><code>position: fixed;</code>: O elemento fica fixo na página, independente da barra de rolagem.</li>
+<li><code>position: sticky;</code>: Utilize a propriedade <code>top</code> para a barra de menu.</li>
+</ul>
+<h2 id="texto">Texto</h2>
+<ul>
+<li><code>font-style: italic;</code></li>
+<li><code>font-weight: 100;</code></li>
+<li><code>text-align: center;</code></li>
+<li><code>font-transform: uppercase;</code></li>
+<li><code>line-height: 2.5em;</code>: Altura da linha.</li>
+<li><code>text-decoration: overline underline line-through;</code></li>
+<li><code>word-spacing: 10px;</code>: Separação entre as palavras.</li>
+<li><code>letter-spacing: 20px;</code>: Separação entre as letras.</li>
+</ul>
+<p>Valores padrão:
+- Unidades absolutas: 
+  - <code>font-size: 100px;</code> (pixels)
+  - <code>font-size: 72pt;</code> (pontos)
+  - <code>font-size: 1in;</code> (polegadas)
+- Unidades relativas:
+  - <code>font-size: 2.2em;</code> (em relação ao tamanho da fonte pai)
+  - <code>font-size: 2.2rem;</code> (em relação ao tamanho da fonte raiz)
+  - <code>font-size: 50vh;</code> (em relação à altura da viewport)</p>
+<p>Font-family:
+- <code>font-family: monospace;</code> (todas as letras ocupam o mesmo espaço)
+- <code>font-family: Georgia, serif;</code> (fonte serifada)
+- <code>font-family: Verdana, sans-serif;</code> (fonte não-serifada)
+- <code>font-family: 'Indie Flower', cursive;</code> (fonte cursiva)</p>
+<h2 id="media-query">Media Query</h2>
+<p>Usada para fazer sites responsivos, adaptando-se a diferentes aparelhos e tamanhos de telas.</p>
+<p>Exemplo de uso:</p>
+<pre><code class="language-css">@media (max-width: 600px){
+    /* Código CSS aqui */
+    .muito-pequeno {display: block;}
+}
+
+@media (max-width: 1000px), (orientation: portrait){
+    /* Código CSS aqui */
+    .pequeno-retrato {display: block;}
+}
+
+@media (min-width: 500px) and (max-width: 1000px){
+    /* Código CSS aqui */
+} 
+</code></pre>
+<h2 id="flex-box">Flex Box</h2>
+<h3 id="quando-voce-marca-display-flex-voce-transforma-a-caixa-em-um-flex-container">Quando você marca <code>display: flex;</code>, você transforma a caixa em um flex container.</h3>
+<ul>
+<li>
+<p><code>display: flex;</code>: Define o elemento como um flex container.</p>
+</li>
+<li>
+<p><code>flex-direction: column or row;</code>: Define a direção dos flex items dentro do flex container. Pode ser definido como <code>row</code> para alinhar os itens horizontalmente ou <code>column</code> para alinhar os itens verticalmente.</p>
+</li>
+<li>
+<p><code>flex-wrap: wrap;</code>: Quebra a linha dos itens de dentro quando não cabem em uma única linha.</p>
+</li>
+<li>
+<p><code>flex-flow: row wrap;</code>: Mistura a direção e a quebra de linha em uma única declaração.</p>
+</li>
+</ul>
+<h3 id="propriedades-para-ajustar-os-itens-dentro-do-flex-container">Propriedades para ajustar os itens dentro do flex container:</h3>
+<ul>
+<li>
+<p><code>justify-content: flex-start, flex-end, center, space-around, space-between;</code>: Define como os flex items são distribuídos ao longo do eixo principal do flex container.</p>
+</li>
+<li>
+<p><code>align-items: stretch;</code>: Valor padrão que estica os itens para preencher todo o espaço disponível no eixo transversal.</p>
+</li>
+<li>
+<p><code>align-items: baseline;</code>: Alinha os itens com base na linha do texto.</p>
+</li>
+<li>
+<p><code>align-content: flex-start, flex-end, center, space-around, space-between;</code>: Alinha as linhas de itens quando há várias linhas no flex container.</p>
+</li>
+</ul>
+<h3 id="propriedades-para-os-itens-individuais">Propriedades para os itens individuais:</h3>
+<ul>
+<li>
+<p><code>order: 1, -1, 10, -877887,;</code>: Define a ordem dos itens.</p>
+</li>
+<li>
+<p><code>align-self: center;</code>: Alinha um item selecionado, sobrescrevendo a propriedade <code>align-items</code>.</p>
+</li>
+<li>
+<p><code>flex-grow: 0, 2, 3...;</code>: Define como o espaço disponível é distribuído entre os itens quando há espaço extra.</p>
+</li>
+<li>
+<p><code>flex-shrink: 1, 2, 3...;</code>: Define como os itens encolhem quando há falta de espaço.</p>
+</li>
+</ul>
+<h3 id="outras-propriedades-relacionadas">Outras propriedades relacionadas:</h3>
+<ul>
+<li>
+<p><code>flex-basis: 100px;</code>: Define a largura inicial de um item em relação ao eixo.</p>
+</li>
+<li>
+<p><code>flex: 3 6 100px;</code>: Propriedade de atalho que combina <code>flex-grow</code>, <code>flex-shrink</code> e <code>flex-basis</code> em uma única declaração.</p>
+</li>
+</ul>
+<p>Lembrando que a largura do item também pode ser definida pelo <code>width</code> ou <code>height</code>, mas a propriedade <code>flex-basis</code> é mais importante no contexto do Flexbox.### Flexbox</p>
+<h3 id="css-grid">CSS Grid</h3>
+<ul>
+<li><code>display: grid;</code>: define o elemento como um grid container.</li>
+<li><code>grid-template-columns: 50% 50%;</code>: cria duas colunas.</li>
+<li><code>grid-template-columns: repeat(4, 8.33% 8.33% 8.33%);</code>: repete as colunas especificadas 4 vezes.</li>
+<li><code>grid-template-columns: 200px 20% 1fr;</code>: define três colunas.</li>
+<li><code>grid-template-columns: 3fr 6fr 3fr;</code>: define três colunas proporcionais.</li>
+<li><code>grid-template-rows: 50% 25% 12.5% 12.5%;</code>: define quatro linhas proporcionais.</li>
+</ul>
+<p><strong>Propriedades para os elementos individuais:</strong></p>
+<ul>
+<li><code>grid-column: 2 / 5;</code>: define que o item ocupa as colunas 2 a 5.</li>
+<li><code>grid-row: 2 / 5;</code>: define que o item ocupa as linhas 2 a 5.</li>
+<li><code>grid-column-start: 2;</code>: define que o item começa na coluna 2.</li>
+<li><code>grid-column-end: 4;</code>: define que o item termina na coluna 4.</li>
+<li><code>grid-column-end: span 2;</code>: define que o item ocupa duas colunas a partir da coluna atual.</li>
+<li><code>grid-row-start: 3;</code>: define que o item começa na linha 3.</li>
+<li><code>grid-row-end: 5;</code>: define que o item termina na linha 5.</li>
+<li><code>grid-row-end: span 2;</code>: define que o item ocupa duas linhas a partir da linha atual.</li>
+<li><code>grid-area: 1 / 1 / 4 / 4;</code>: define que o item ocupa as linhas 1 a 4 e as colunas 1 a 4.</li>
+</ul>
+<p><strong>Outras propriedades relacionadas:</strong></p>
+<ul>
+<li><code>grid-template-columns:
+  [inicio] 1fr
+  [metade-1 meio-1] 1fr
+  [metade-2 meio-2] 1fr [fim];</code>: define nomes para as colunas do grid.</li>
+<li><code>column-gap: 20px;</code>: define o espaçamento entre as colunas.</li>
+<li><code>row-gap: 20px;</code>: define o espaçamento entre as linhas.</li>
+<li><code>gap: 20px 10px;</code>: define o espaçamento entre as linhas e colunas.</li>
+<li><code>grid-template-areas:
+  'nome-do-selector nome-do-selector'
+  'nome-do-selector nome-do-selector'
+  'nome-do-selector nome-do-selector';</code>: define o layout do grid usando nomes para os seletores.</li>
+</ul>
+<h2 id="animacoes-css">Animações CSS</h2>
+<ul>
+<li>
+<p><code>transform: skew(-20deg);</code>: inclina o objeto.</p>
+</li>
+<li>
+<p><code>transition-property: color;</code>: escolhe qual propriedade vai passar pela transição, podendo trabalhar com múltiplas propriedades.</p>
+</li>
+<li><code>transition-duration: 1s;</code>: define a duração da transição para as propriedades especificadas.</li>
+<li><code>transition-delay: 1s;</code>: define o tempo de espera antes de iniciar a transição.</li>
+<li><code>transition-timing-function: ease-in/ease-out/ease-in-out/cubic-bezier(.15,.89,.85,.26);</code>: define a forma em relação ao tempo que a transição ocorrerá. Também é possível usar <code>cubic-bezier()</code> para personalizar o tempo de acordo com as curvas de Bezier.</li>
+</ul>
+<p>Para animações usando keyframes, prefira usar <code>opacity</code> e <code>transform</code>:</p>
+<ul>
+<li><code>animation-name: nome-da-animação;</code>: define o nome da animação.</li>
+<li><code>animation-duration: 1s;</code>: define a duração da animação.</li>
+<li><code>animation-timing-function: ease-inoutinout/cubic-bezier()/steps(3, jump-end/jump-start)/linear;</code>: define a forma em relação ao tempo que a animação ocorrerá. Também é possível usar <code>steps()</code> para criar animações com saltos ou <code>linear</code> para um movimento linear.</li>
+<li><code>animation-delay: 1s;</code>: define o tempo de espera antes de iniciar a animação.</li>
+<li><code>animation-iteration-count: 2.5/infinite;</code>: define a quantidade de vezes que a animação será executada, podendo usar valores reais ou <code>infinite</code> para repetir infinitamente.</li>
+<li><code>animation-direction: reverse/alternate/alternate-reverse;</code>: define a direção da animação, podendo ser revertida, alternada ou alternada com reversão.</li>
+<li><code>animation-fill-mode: forwards/;</code>: define como os valores devem ser aplicados antes ou depois de uma animação. <code>forwards</code> mantém o último estado da animação, <code>backwards</code> retorna ao valor inicial mesmo que não seja definido no keyframe e <code>both</code> combina as duas opções anteriores.</li>
+<li><code>animation-play-state: running/paused;</code>: define o estado da animação, se está em execução ou pausada.</li>
+<li><code>animation: fly 1s linear infinite alternate;</code>: propriedade de atalho que combina várias propriedades relacionadas à animação.</li>
+</ul>
+<h2 id="mantendo-proporcao-em-imagens">Mantendo proporção em imagens</h2>
+<ul>
+<li><code>object-fit: cover;</code>: faz com que a imagem não mude de proporção.</li>
+<li><code>aspect-ratio: 16 / 9;</code>: define a proporção da imagem.</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href=".." class="btn btn-neutral float-left" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../SASS/" class="btn btn-neutral float-right" title="SASS">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href=".." style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../SASS/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://JonesGP.com/django/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Django - JonesGP's Docs</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Django";
+        var mkdocs_page_input_path = "django.md";
+        var mkdocs_page_url = "/django/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> JonesGP's Docs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../CSS/">CSS</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../SASS/">SASS</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../django_mecajato/">Django Mecajato</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="./">Django</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../DOM/">DOM</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../GitHub/">GitHub</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../powershell_seguranca/">PowerShell Segurança terminal</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../pyinstaller/">PyInstaller</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../requirements.txt/">Requirements</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Streamlit/">Streamlit</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Vite/">Vite</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="" href="../about.md">About</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">JonesGP's Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Django</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <p>para criar um novo projeto
+django-admin startproject <nome do projeto></p>
+<p>agora para criar uma aplicação dentro do nosso projeto
+django-admin startapp <nome do app></p>
+<p>1ª passo para fazela funcionar
+antes tem que importar a sua viewer do seu app que vai esta em views.py
+from <nome da pasta do app> import views
+uma viewer é basicamente uma função que determina oque fazer quando chegar naquela pagina</p>
+<p>primeiro tem que criar uma rota para seu 'app' vai na pasta do seuprojeto e adiciona la 
+em urls.py em urlpatterns = [
+    """
+    # rota, view resposavel, nome de preferencia
+    # facebook.com
+    path(''), colocando apenas espaços vazios vai ser para a pagina inicial
+    # facebook.com/devaprender
+    path('devaprender/') colocando o depois do indice inicial, vai para no caso facebook.com/devaprender
+    """</p>
+<pre><code>path('', views.home, name='home') definir o nome é importante porque se voce quiser colocar um link para voltar para
+a pagina inicial voce vai chamar o link pelo nome que definir aqui
+</code></pre>
+<p>]</p>
+<p>2ª passo tem que criar uma viewer
+na views.py tem que deixar importando o from django.shortcuts import render
+a função home definida aqui sera a chamada em urls.py quando entrar na aplicação
+def home(request): request é um parametro que ja vem imbutido no django que te permite acessar os dados que estão dentro daquela pagina
+    return render(request, 'usuarios/home.html') o render cria renderiza um pagina, e essa pagina precisa dos dados por isso request no incio, ai passa ai uma pagina html para exibir esses dados</p>
+<p>no seu aplicativo, para criar htmls voce precisa criar um pasta templates e precisa ser exatamente nesse nome porque esse vai ser o nome que o django vai esta buscando
+é comum criar subpastas para organizar mais seus projetos
+no caso o arquivo home.html foi criado exatamente na pasta dentro do app templates\usuarios\home.html</p>
+<p>depois disso tudo tem que cadastra nosso app dentro do nosso projeto
+quando voce criar um aplicativo ele precisa ser registrado dentro do seu projeto
+para fazer isso voce precisar acessar o settings.py do projeto em INSTALLED_APPS = ['nome da pasta do app']</p>
+<p>ai sim voce pode rodar o servidor
+python .\manage.py runserver</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../django_mecajato/" class="btn btn-neutral float-left" title="Django Mecajato"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../DOM/" class="btn btn-neutral float-right" title="DOM">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../django_mecajato/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../DOM/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
